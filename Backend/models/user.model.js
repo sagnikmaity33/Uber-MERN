@@ -35,6 +35,8 @@ userSchema.methods.generateAuthToken = function () {
     return token;
 }
 
+
+
 userSchema.methods.comparePassword = async function (password) {
     return await bcrypt.compare(password, this.password);
 }
@@ -47,3 +49,14 @@ const userModel = mongoose.model('user', userSchema);
 
 
 module.exports = userModel;
+
+
+
+// {
+//     "fullname":{
+//         "firstname" : "test_firstname",
+//         "lastname" : "test_password"
+//     },   
+//     "email": "test@gmail.com",
+//     "password": "testing_pass123"
+// }
